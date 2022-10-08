@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+class_name Player
+
 var velocity := Vector2.ZERO
 const GRAVITY := 30
 const JUMPFORCE := -700
@@ -24,3 +26,11 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMPFORCE
 		
 	velocity = move_and_slide(velocity, Vector2.UP)
+
+
+func _on_Wormhole1_body_entered(body:Node) -> void:
+	position.x = 0
+
+
+func _on_Checkpoint_body_entered(body: Node) -> void:
+	queue_free()

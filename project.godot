@@ -8,6 +8,22 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Scenes/Player/Player.gd"
+}, {
+"base": "StaticBody2D",
+"class": "Trapdoor1",
+"language": "GDScript",
+"path": "res://Scenes/Platforms/Trapdoor1.gd"
+} ]
+_global_script_class_icons={
+"Player": "",
+"Trapdoor1": ""
+}
+
 [application]
 
 config/name="JumpUp"
@@ -16,8 +32,8 @@ config/icon="res://icon.png"
 
 [display]
 
-window/size/height=900
 window/size/width=700
+window/size/height=900
 
 [gui]
 
@@ -40,6 +56,14 @@ jump={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":32,"unicode":0,"echo":false,"script":null)
  ]
 }
+
+[layer_names]
+
+2d_physics/layer_1="player"
+2d_physics/layer_2="platform"
+2d_physics/layer_3="fallzone"
+2d_physics/layer_4="item"
+2d_physics/layer_5="enemy"
 
 [physics]
 
