@@ -85,6 +85,9 @@ disabled = true
 one_way_collision_margin = 0.0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -2.5 )
+scale = Vector2( 1, 0.6875 )
 frames = SubResource( 19 )
-animation = "closed"
+animation = "closing"
+frame = 7
 playing = true
