@@ -9,5 +9,7 @@ func _on_body_entered(body: Node):
 	animation_player.play("destroy")
 	apply_checkpoint(body)
 
+# This is for future features when a player crosses a general checkpoint. Possibly save location
+# using Autoload so that if the game ends, that's the restart point
 func apply_checkpoint(body: Node):
 	pass
