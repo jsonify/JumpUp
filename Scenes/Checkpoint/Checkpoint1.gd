@@ -11,4 +11,3 @@ func _on_Checkpoint1_body_entered(body: Node) -> void:
 
 func trapdoor1_close():
 	get_node("Trapdoor1").trapdoor1_close()
-
