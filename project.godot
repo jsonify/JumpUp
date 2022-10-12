@@ -13,15 +13,9 @@ _global_script_classes=[ {
 "class": "Player",
 "language": "GDScript",
 "path": "res://Scenes/Player/Player.gd"
-}, {
-"base": "StaticBody2D",
-"class": "Trapdoor1",
-"language": "GDScript",
-"path": "res://Scenes/Platforms/Trapdoor1.gd"
 } ]
 _global_script_class_icons={
-"Player": "",
-"Trapdoor1": ""
+"Player": ""
 }
 
 [application]

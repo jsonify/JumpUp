@@ -1,19 +1,22 @@
 extends StaticBody2D
-class_name Trapdoor1
 
 onready var animated_sprite := $AnimatedSprite
-onready var collision_shape := $CollisionShape2D
+onready var coll_shape := $CollisionShape2D
 
 
 func _ready() -> void:
-	collision_shape.set_deferred("disabled", true)
+	var checkpoint = get_tree().get_root().find_node("Checkpoint", true, false)
+	checkpoint.connect("checkpoint_reached", self, "handle_checkpoint_reached")
 	
+func handle_checkpoint_reached():
+	coll_shape.set_deferred("disabled", false)
+	print("Checkpoint has been reached, son.")
 	
 func _process(delta: float) -> void:
-#	collision_shape.disabled = false
+	
 	pass
 
 func trapdoor1_close():
-	collision_shape.set_deferred("disabled", false)
-	print("collision_shape is disabled: ", collision_shape.disabled)
+	pass
+#	print("collision_shape is disabled: ", collision_shape.disabled)
 
