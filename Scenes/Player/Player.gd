@@ -9,6 +9,10 @@ const JUMPFORCE := -700
 var horizontal_speed := 200.0
 var horizontal_direction := 1
 
+var screen_size := Vector2.ZERO
+
+func _ready() -> void:
+	screen_size = get_viewport_rect().size
 
 func _physics_process(delta: float) -> void:
 	if horizontal_direction == -1:
@@ -26,11 +30,14 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMPFORCE
 		
 	velocity = move_and_slide(velocity, Vector2.UP)
+	
+	wormhole_teleporter()
+	
 
-
-func _on_Wormhole1_body_entered(body:Node) -> void:
-	position.x = 0
+func wormhole_teleporter():
+	global_position.x = wrapf(global_position.x, 0, screen_size.x)
 
 
 func _on_Checkpoint_body_entered(body: Node) -> void:
 	queue_free()
+
