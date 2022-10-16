@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-onready var animated_sprite := $AnimatedSprite
+#onready var animated_sprite := $AnimatedSprite
 onready var animation_player := $AnimationPlayer
 onready var coll_shape := $CollisionShape2D
 var trapdoor_triggered := false
@@ -11,7 +11,8 @@ func _ready() -> void:
 	var checkpoint = get_tree().get_root().find_node("Checkpoint1", true, false)
 #	this will connect to the signal in the checkpoint
 	checkpoint.connect("checkpoint1_reached", self, "handle_checkpoint_reached")
-	animated_sprite.visible = false
+#	animated_sprite.visible = false
+	animation_player.play("open")
 	
 func _process(delta: float) -> void:
 		if trapdoor_triggered:
