@@ -7,7 +7,7 @@ func _ready() -> void:
 	checkpoint.connect("checkpoint2_reached", self, "handle_checkpoint_reached")
 	animation_player.play("open")
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 		if trapdoor_triggered:
 			animation_player.play("closing")
 			yield(get_tree().create_timer(0.5),"timeout")

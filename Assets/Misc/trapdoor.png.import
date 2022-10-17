@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/checkered-box.png-654111bbee0357f5fa90584b37c70920.stex"
+path="res://.import/trapdoor.png-e938bec834c025699ecca059f908f122.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/checkered-box.png"
-dest_files=[ "res://.import/checkered-box.png-654111bbee0357f5fa90584b37c70920.stex" ]
+source_file="res://Assets/Misc/trapdoor.png"
+dest_files=[ "res://.import/trapdoor.png-e938bec834c025699ecca059f908f122.stex" ]
 
 [params]
 

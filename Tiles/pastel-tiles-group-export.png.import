@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/trapdoor.png-e8c322fc730dee952207dd4e8545a372.stex"
+path="res://.import/pastel-tiles-group-export.png-01d0ddac3982d54d998cebdaaa49a921.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/trapdoor.png"
-dest_files=[ "res://.import/trapdoor.png-e8c322fc730dee952207dd4e8545a372.stex" ]
+source_file="res://Tiles/pastel-tiles-group-export.png"
+dest_files=[ "res://.import/pastel-tiles-group-export.png-01d0ddac3982d54d998cebdaaa49a921.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

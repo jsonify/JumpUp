@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/vinik24-8x.png-f35e4560c2f5f6a9e225d597c5c71b69.stex"
+path="res://.import/vinik24-8x.png-9356da08659e430bfdbf421505140426.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/vinik24-8x.png"
-dest_files=[ "res://.import/vinik24-8x.png-f35e4560c2f5f6a9e225d597c5c71b69.stex" ]
+source_file="res://Assets/Misc/vinik24-8x.png"
+dest_files=[ "res://.import/vinik24-8x.png-9356da08659e430bfdbf421505140426.stex" ]
 
 [params]
 

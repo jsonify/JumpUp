@@ -15,5 +15,5 @@ func _on_body_entered(body: Node):
 
 # This is for future features when a player crosses a general checkpoint. Possibly save location
 # using Autoload so that if the game ends, that's the restart point
-func apply_checkpoint(body: Node):
+func apply_checkpoint(_body: Node):
 	emit_signal("checkpoint_reached")

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/white-sprite.png-9852981bdb3537033c6666f1f4348436.stex"
+path="res://.import/checkered-box.png-b9a0a77c1f83ad4400b5f1541a93836b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/white-sprite.png"
-dest_files=[ "res://.import/white-sprite.png-9852981bdb3537033c6666f1f4348436.stex" ]
+source_file="res://Assets/Misc/checkered-box.png"
+dest_files=[ "res://.import/checkered-box.png-b9a0a77c1f83ad4400b5f1541a93836b.stex" ]
 
 [params]
 

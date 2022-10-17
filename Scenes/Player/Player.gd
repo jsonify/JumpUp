@@ -3,6 +3,7 @@ extends KinematicBody2D
 class_name Player
 
 var velocity := Vector2.ZERO
+var prizes := 0
 const GRAVITY := 30
 const JUMPFORCE := -700
 
@@ -14,7 +15,7 @@ var screen_size := Vector2.ZERO
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if horizontal_direction == -1:
 		$Sprite.flip_h = true
 	
@@ -32,12 +33,10 @@ func _physics_process(delta: float) -> void:
 	velocity = move_and_slide(velocity, Vector2.UP)
 	
 	wormhole_teleporter()
-	
 
 func wormhole_teleporter():
 	global_position.x = wrapf(global_position.x, 0, screen_size.x)
 
 
-func _on_Checkpoint_body_entered(body: Node) -> void:
+func _on_Checkpoint_body_entered(_body: Node) -> void:
 	queue_free()
-
