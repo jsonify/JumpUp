@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=2]
+[gd_scene load_steps=69 format=2]
 
 [ext_resource path="res://Tiles/mock_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=2]
@@ -505,6 +505,10 @@ font_data = ExtResource( 9 )
 size = 28
 font_data = ExtResource( 9 )
 
+[sub_resource type="DynamicFont" id=84]
+size = 250
+font_data = ExtResource( 9 )
+
 [node name="Level1" type="Node2D"]
 
 [node name="Bg" parent="." instance=ExtResource( 11 )]
@@ -646,6 +650,16 @@ margin_bottom = 35.5
 custom_fonts/font = SubResource( 83 )
 text = "00"
 script = ExtResource( 13 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Info" type="Label" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 84 )
+text = "3"
+align = 1
+valign = 1
 
 [connection signal="body_entered" from="Checkpoints/Checkpoint2" to="Checkpoints/Checkpoint2" method="_on_Checkpoint2_body_entered"]
 [connection signal="prize_collected" from="Prizes/Prize" to="HUD" method="_on_prize_collected"]
