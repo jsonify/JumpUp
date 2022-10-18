@@ -1,6 +1,7 @@
 extends Node2D
 
 onready var player := $Player
+onready var player_animation := $Player/Sprite
 onready var minutes := $HUD/Right/Panel2/TimerMins
 onready var seconds := $HUD/Right/Panel2/TimerSecs
 
@@ -14,6 +15,8 @@ func _ready():
 	minutes.timer_on = false
 	seconds.set_physics_process(false)
 	seconds.timer_on = false
+	player_animation.animation = "Idle"
+	
 	
 func start():
 	player.set_physics_process(true)
@@ -21,5 +24,7 @@ func start():
 	minutes.timer_on = true
 	seconds.set_process(true)
 	seconds.timer_on = true
+	
+	player_animation.animation = "Running"
 	
 	
