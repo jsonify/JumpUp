@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+onready var player_sprite := $Sprite
 class_name Player
 
 var velocity := Vector2.ZERO
@@ -19,6 +20,10 @@ func _physics_process(_delta: float) -> void:
 	if horizontal_direction == -1:
 		$Sprite.flip_h = true
 	
+	if is_on_floor():
+		pass
+		# player_sprite.animation = "Jump"
+
 	if is_on_wall():
 		horizontal_direction *= -1
 		$Sprite.flip_h = !$Sprite.flip_h
@@ -29,6 +34,8 @@ func _physics_process(_delta: float) -> void:
 #
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMPFORCE
+		# player_sprite.animation = "Jump"
+
 		
 	velocity = move_and_slide(velocity, Vector2.UP)
 	
