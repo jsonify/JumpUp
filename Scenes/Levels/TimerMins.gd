@@ -2,6 +2,7 @@ extends Label
 
 var time = 0
 var timer_on := false
+var minutes := 0
 
 func _ready() -> void:
 	timer_on = true
@@ -15,6 +16,6 @@ func _process(delta):
 			
 		time += delta
 		
-		var minutes = fmod(time, 60 * 60) / 60
+		minutes = fmod(time, 60 * 60) / 60
 		var minutes_passed = "%01d" % [minutes]
 		text = minutes_passed

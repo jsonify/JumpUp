@@ -20,9 +20,6 @@ func _physics_process(_delta: float) -> void:
 	if horizontal_direction == -1:
 		$Sprite.flip_h = true
 	
-	if is_on_floor():
-		pass
-		# player_sprite.animation = "Jump"
 
 	if is_on_wall():
 		horizontal_direction *= -1
@@ -34,7 +31,7 @@ func _physics_process(_delta: float) -> void:
 #
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMPFORCE
-		# player_sprite.animation = "Jump"
+		
 
 		
 	velocity = move_and_slide(velocity, Vector2.UP)
@@ -47,3 +44,7 @@ func wormhole_teleporter():
 
 func _on_Checkpoint_body_entered(_body: Node) -> void:
 	queue_free()
+
+
+func _on_Finish_body_entered(body: Node) -> void:
+	pass # Replace with function body.
