@@ -1,6 +1,6 @@
 extends Label
 
-var time = 0
+var time := 0
 var timer_on := false
 
 func _ready() -> void:
