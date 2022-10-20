@@ -5,10 +5,14 @@ class_name Player
 
 var velocity := Vector2.ZERO
 var prizes := 0
-const GRAVITY := 30
-const JUMPFORCE := -700
+var gravity := 30
+
+var jumpforce := -700
+var jumpforce_slow := -1200
 
 var horizontal_speed := 200.0
+var horizontal_speed_slow := 20.0
+
 var horizontal_direction := 1
 
 var screen_size := Vector2.ZERO
@@ -27,10 +31,10 @@ func _physics_process(_delta: float) -> void:
 		
 	velocity.x = horizontal_speed * horizontal_direction
 	
-	velocity.y += GRAVITY
+	velocity.y += gravity
 #
 	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMPFORCE
+		velocity.y = jumpforce
 		
 
 		
