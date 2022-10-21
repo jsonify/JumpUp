@@ -14,3 +14,5 @@ func _process(delta):
 		seconds = fmod(time, 60)
 		var seconds_passed = "%02d" % [seconds]
 		text = seconds_passed
+	
+	
