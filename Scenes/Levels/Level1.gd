@@ -13,7 +13,6 @@ var current_time
 var bonus := 0
 
 func _ready():
-	finish_area.connect("body_entered", self, "_on_Finish_body_entered")
 	# turn the physics_process off to prevent the player from moving
 	player.set_physics_process(false)
 	
@@ -25,7 +24,7 @@ func _ready():
 	seconds.timer_on = false
 	player_animation.animation = "Idle"
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	current_time = (minutes.minutes) * 60 + seconds.seconds
 	
 func start():
@@ -47,5 +46,5 @@ func finish_level():
 	info_label.show()
 	info_label.text = "Time: %02d : %02d\nScore: %02d" % [minutes.minutes, seconds.seconds, current_time]
 
-func _on_Finish_body_entered(body: Node) -> void:
+func _on_Finish_body_entered(_body: Node) -> void:
 	finish_level()

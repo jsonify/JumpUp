@@ -2,7 +2,7 @@ extends Label
 
 var time = 0
 var timer_on := false
-var minutes := 0
+var minutes := 0.0
 
 func _ready() -> void:
 	timer_on = true
