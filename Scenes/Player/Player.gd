@@ -35,10 +35,14 @@ func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("slow"):
 		Engine.time_scale = 0.1
 		horizontal_speed = horizontal_speed_dash
+		$Camera2D.zoom.x = .5
+		$Camera2D.zoom.y = .5
 		
 	if Input.is_action_just_released("slow"):
 		Engine.time_scale = 1
 		horizontal_speed = horizontal_speed_normal
+		$Camera2D.zoom.x = 1
+		$Camera2D.zoom.y = 1
 
 	if is_on_wall():
 		horizontal_direction *= -1

@@ -1,5 +1,7 @@
 extends Area2D
 
+# not used currently
+
 onready var animation_player := $AnimationPlayer
 
 signal prize_collected
