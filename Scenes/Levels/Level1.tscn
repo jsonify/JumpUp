@@ -762,7 +762,7 @@ anims/RESET = SubResource( 85 )
 anims/start_countdown = SubResource( 86 )
 
 [node name="Finish" parent="." instance=ExtResource( 15 )]
-position = Vector2( 532, -1246 )
+position = Vector2( 544, -1230 )
 collision_layer = 0
 
 [connection signal="body_entered" from="Checkpoints/Checkpoint2" to="Checkpoints/Checkpoint2" method="_on_Checkpoint2_body_entered"]
