@@ -11,7 +11,8 @@ var jumpforce := -700
 var jumpforce_slow := -1200
 
 var horizontal_speed := 200.0
-var horizontal_speed_slow := 20.0
+var horizontal_speed_normal := 200.0
+var horizontal_speed_dash := 400.0
 
 var horizontal_direction := 1
 
@@ -24,6 +25,20 @@ func _physics_process(_delta: float) -> void:
 	if horizontal_direction == -1:
 		$Sprite.flip_h = true
 	
+	if Input.is_action_pressed("dash"):
+		horizontal_speed = horizontal_speed_dash
+		$Sprite.speed_scale = 4
+	if Input.is_action_just_released("dash"):
+		horizontal_speed = horizontal_speed_normal
+		$Sprite.speed_scale = 2
+	
+	if Input.is_action_just_pressed("slow"):
+		Engine.time_scale = 0.1
+		horizontal_speed = horizontal_speed_dash
+		
+	if Input.is_action_just_released("slow"):
+		Engine.time_scale = 1
+		horizontal_speed = horizontal_speed_normal
 
 	if is_on_wall():
 		horizontal_direction *= -1
